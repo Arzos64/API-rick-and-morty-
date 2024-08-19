@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+    margin-top: 80px;
+}
+
+.container_button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.space-button {
+  background: linear-gradient(145deg, #1d2671, #c33764);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(29, 38, 113, 0.6), 0 0 30px rgba(195, 55, 100, 0.4);
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px 30px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin-top: 80px;
+}
+
+.space-button:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(145deg, rgba(29, 38, 113, 0.6), rgba(195, 55, 100, 0.6));
+  border-radius: 10px;
+  z-index: -1;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.space-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 40px rgba(29, 38, 113, 0.8), 0 0 60px rgba(195, 55, 100, 0.6);
+}
+
+.space-button:hover:before {
+  filter: blur(10px);
+  opacity: 0.8;
+}
+
+.card {
+  margin-top: 30px;
+  width: 300px;
+  height: 450px;
+  background: linear-gradient(145deg, #1d2671, #c33764); /* Degradado espacial */
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 20px rgba(29, 38, 113, 0.6), 0 0 40px rgba(195, 55, 100, 0.4); /* Sombra de neón */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4), 0 0 30px rgba(29, 38, 113, 0.8), 0 0 60px rgba(195, 55, 100, 0.6); /* Efecto de neón en hover */
+}
+
+.card::before, .card::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, rgba(29, 38, 113, 0.2), rgba(195, 55, 100, 0.2));
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before, .card:hover::after {
+  opacity: 0.8;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+.card img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+
+
+body {
+    background: #000000; /* Fondo negro */
+    background: radial-gradient(circle, #1a2a6c, #b21f1f, #fdbb2d); /* Gradiente que simula el espacio */
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .stars {
+    width: 5px;
+    height: 5px;
+    background: rgb(255, 255, 255);
+    box-shadow: 
+      0 0 #fff, 100px 100px #fff, 200px 200px #fff, 300px 300px #fff, 400px 400px #fff, 
+      500px 500px #fff, 600px 600px #fff, 700px 700px #fff, 800px 800px #fff, 900px 900px #fff, 
+      1000px 1000px #fff, 1100px 1100px #fff, 1200px 1200px #fff, 1300px 1300px #fff, 
+      1400px 1400px #fff, 1500px 1500px #fff, 1600px 1600px #fff, 1700px 1700px #fff, 
+      1800px 1800px #fff, 1900px 1900px #fff, 2000px 2000px #fff;
+    animation: animStar 50s linear infinite;
+  }
+  
+  .stars:after {
+    content: ' ';
+    position: absolute;
+    top: -2000px;
+    width: 5px;
+    height: 5px;
+    background: white;
+    box-shadow: 
+      0 0 #fff, 100px 100px #fff, 200px 200px #fff, 300px 300px #fff, 400px 400px #fff, 
+      500px 500px #fff, 600px 600px #fff, 700px 700px #fff, 800px 800px #fff, 900px 900px #fff, 
+      1000px 1000px #fff, 1100px 1100px #fff, 1200px 1200px #fff, 1300px 1300px #fff, 
+      1400px 1400px #fff, 1500px 1500px #fff, 1600px 1600px #fff, 1700px 1700px #fff, 
+      1800px 1800px #fff, 1900px 1900px #fff, 2000px 2000px #fff;
+  }
+  
+  @keyframes animStar {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(2000px);
+    }
+  }
+
+  .info{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+
+  .card > :where(h1, h2, h3){
+    color: #000; 
+    }

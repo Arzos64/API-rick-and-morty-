@@ -1,0 +1,13 @@
+<div class="container_button">
+</div>
+<div class="container">
+@for (item of personajes?.results; track $index) {
+    <div class="card">
+        <div class="stars"></div>
+        <img class="image" src="{{item.image}}" alt="">
+        <p class="info">Name: {{item.name}}</p>
+        <p class="info">Sexo: {{item.gender}}</p>
+        <p class="info">State: {{item.status}}</p>
+    </div>
+}
+</div>
